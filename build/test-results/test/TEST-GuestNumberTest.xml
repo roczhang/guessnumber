@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="GuestNumberTest" tests="5" skipped="0" failures="0" errors="0" timestamp="2018-03-24T07:29:51" hostname="PVGN50897596A" time="0.016">
+  <properties/>
+  <testcase name="test_two_number_with_0A1B_2nd_match" classname="GuestNumberTest" time="0.0"/>
+  <testcase name="test_one_number_with_guess_no" classname="GuestNumberTest" time="0.0"/>
+  <testcase name="test_two_number_with_0A0B" classname="GuestNumberTest" time="0.0"/>
+  <testcase name="test_one_number_with_guess_yes" classname="GuestNumberTest" time="0.0"/>
+  <testcase name="test_two_number_with_0A1B_1st_Match" classname="GuestNumberTest" time="0.0"/>
+  <system-out><![CDATA[]]></system-out>
+  <system-err><![CDATA[]]></system-err>
+</testsuite>
