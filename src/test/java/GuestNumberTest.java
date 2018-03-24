@@ -60,13 +60,32 @@ public class GuestNumberTest {
     }
 
 
-    @Ignore
-    public void test_two_number_with_1A0B_1nd_match() throws Exception {
+    @Test
+    public void test_two_number_with_2A0B_1nd_match() throws Exception {
+
+        GuessNumberGame game = getGuessNumberGame("13");
+        String answer = game.guess("13");
+        assertThat("guess two number", answer, is("2A0B"));
+
+    }
 
 
-        GuessNumberGame game = getGuessNumberGame("23");
+    @Test
+    public void test_two_number_with_0A2B_1nd_match() throws Exception {
+
+        GuessNumberGame game = getGuessNumberGame("13");
         String answer = game.guess("31");
-        assertThat("guess two number", answer, is("0A1B"));
+        assertThat("guess two number", answer, is("0A2B"));
+
+    }
+
+
+    @Test
+    public void test_3__number_with_2A1B_1nd_match() throws Exception {
+
+        GuessNumberGame game = getGuessNumberGame("133");
+        String answer = game.guess("132");
+        assertThat("guess two number", answer, is("2A1B"));
 
     }
 

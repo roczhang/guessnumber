@@ -12,29 +12,41 @@ public class GuessNumberGame {
 
     public String guess(String guess) {
 
+        int countA = 0;
+        int countB = 0;
+        for (int i = 0; i < guess.length(); i++) {
 
-        if (secret.length() == 2) {
-
-            if (contains(guess.charAt(1))
-                    && !SamePositionCompare(guess, 1)) {
-
-                return "0A1B";
+            if (matchAType(this.secret, guess, i)) {
+                countA += 1;
             }
-
-            if (contains(guess.charAt(0)) &&
-                    !SamePositionCompare(guess, 0)) {
-                return "0A1B";
+            if (matchBType(guess, i)) {
+                countB += 1;
             }
         }
+        return new Integer(countA) + "A" + new Integer(countB) + "B";
+    }
 
-        return this.secret.equals(guess) ? "1A0B" : "0A0B";
+    private boolean matchAType(String secret, String guess, int i) {
+
+        return secret.charAt(i) == guess.charAt(i);
     }
 
     private boolean SamePositionCompare(String guess, int index) {
         return guess.charAt(index) == secret.charAt(index);
     }
 
-    private boolean contains(char guess) {
-        return secret.indexOf(guess) != -1;
+    private boolean matchBType(String guess, int i) {
+
+        String numberBefore_i = this.secret.substring(0, i);
+        String numberAfter_i="";
+        if (i + 1 < guess.length()) {
+             numberAfter_i = numberBefore_i + secret.substring(i + 1);
+        }
+
+
+
+        return (numberBefore_i + numberAfter_i).indexOf(guess.charAt(i)) != -1;
+
     }
+
 }
