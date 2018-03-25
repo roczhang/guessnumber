@@ -1,4 +1,4 @@
-package com.yg;
+package yg;
 
 /**
  * Created by I076057 on 3/24/2018.

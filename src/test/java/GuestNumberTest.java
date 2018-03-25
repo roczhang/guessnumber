@@ -1,5 +1,4 @@
-import com.yg.GuessNumberGame;
-import org.junit.Ignore;
+import yg.GuessNumberGame;
 import org.junit.Test;
 
 import static org.hamcrest.core.Is.is;
