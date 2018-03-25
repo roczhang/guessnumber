@@ -31,10 +31,6 @@ public class GuessNumberGame {
         return secret.charAt(i) == guess.charAt(i);
     }
 
-    private boolean SamePositionCompare(String guess, int index) {
-        return guess.charAt(index) == secret.charAt(index);
-    }
-
     private boolean matchBType(String guess, int i) {
 
         String numberBefore_i = this.secret.substring(0, i);
@@ -42,8 +38,6 @@ public class GuessNumberGame {
         if (i + 1 < guess.length()) {
              numberAfter_i = numberBefore_i + secret.substring(i + 1);
         }
-
-
 
         return (numberBefore_i + numberAfter_i).indexOf(guess.charAt(i)) != -1;
 
